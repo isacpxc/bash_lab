@@ -22,8 +22,7 @@ VERSION="1.0"
 case $1 in
     "-h"|"--help")
         echo "
-Renomeia os arquivos de um diretório com a primeira palavra encontra-
-da em cada arquivo.
+Renames files in a directory with the first word found in each file.
 
 Usage: $0 [Options...] [Directory]
 
@@ -58,10 +57,10 @@ Options:
                     fi
                 done
             else    
-                echo "$1 não é um diretório ou não foi encontrado."
+                echo "$1 is not an directory or was not founded"
             fi
         else
-            echo "argumento inválido."
+										echo "Invalid argument."
         fi
     ;;
 

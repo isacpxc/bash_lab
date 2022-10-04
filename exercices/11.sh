@@ -24,7 +24,7 @@ for OPTION in "$@"; do
     case $OPTION in 
         "-h"|"--help")
                 echo "
-Calcula um expressão matemática que usuário informa
+Calculates a mathematical expression that the user enters
 Usage: $0 [Options...] [Exp...]
 
 Options:
@@ -32,8 +32,8 @@ Options:
     -h, --help      Exibe essa ajuda.
     -v, --version   Exibe a versão.
 
-Exp podem ser compostas com os simbolos *, +, /, -
-como: 13*9, 1.5+7, -5+1, 44/3
+Exp can be composed with the symbols *, +, /, -
+like: 13*9, 1.5+7, -5+1, 44/3
         "
         break
     ;;

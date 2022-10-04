@@ -48,18 +48,18 @@ Options:
         ;;
 
         *)
-            echo "armunto inválido $1"
+            echo "invalid argument $1"
         ;;
     esac
 else 
-    echo "Informe o nome do usuário a ser consultado: "
+    echo "Inform the name of the user to be consulted: "
     read -r USER
 
     USER_LIST=$(grep -iE "root|home" /etc/passwd)
 
     if echo "$USER_LIST" | grep -qis "$USER"; then
-        echo "$USER é um usuário cadastrado."
+        echo "$USER is a registered user."
     else    
-        echo "$USER não é um usuário cadastrado."
+        echo "$USER is not a registered user."
     fi
 fi

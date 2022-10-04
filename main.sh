@@ -6,28 +6,26 @@ echo "====LOADED====";
 INPUT=-1;
 HOLD_i=0;
 answer="a";
+reg='^[0-9]{8}$';
+
 clear
 while [ $INPUT -ne 14 ]; do
 	echo "Anytime you can press \"--help\" to get some help on this menu"
-	#echo "1 - q1";
-	#echo "2 - q2";
-	#echo "3 - q3";
-	#echo "4 - q4";
-	#echo "14 - exit"
+	
 	for i in ${ARRAYTITLE[@]}
 	do
 		HOLD_i=$((HOLD_i+1));
-	#	if [ $HOLD_i -eq $INPUT ]; then
-	#		echo "*${i}"
-	#		echo "---->texto da questão $HOLD_i"
-	#	else
-			echo "${i}"	
-	#	fi
+		echo "${i}"	
 		
 	done
 	HOLD_i=0;
 	read INPUT;
-	
+	#if [[ ! $INPUT =~ $reg ]]; then
+	#	echo "PLEASE CHOOSE A VALID OPTION, TO CONTINUE PRESS ENTER";
+  #	read enter;
+ 	# clear;
+	#fi
+
 	############
 	if [[ $INPUT -gt 0 && $INPUT -lt 14 ]]
 	then
@@ -42,24 +40,28 @@ while [ $INPUT -ne 14 ]; do
 			echo "PRESS ENTER TO CONTINUE"
 			read pressE;
 			clear
+			
 		fi
 		clear
 		answer="a";
 		
 	fi
-	if [[ "$INPUT" == "--help" ]]; then
-		clear	
-		cat help.txt
-		echo "PRESS ENTER TO CONTINUE"
-    read pressE;
-		INPUT=1;
+	if [[ "$INPUT" == "--help" || ! $INPUT =~ $reg ]]; then
+		
+		if [[ $INPUT -lt 1 || $INPUT -gt 14 ]]; then
+			INPUT=1; 
+			clear
+			cat help.txt
+			echo "PRESS ENTER TO CONTINUE"
+			read pressE	
+		fi
 		clear
 
 	fi
 
 	if [[ "$INPUT" != "--help" ]];then
 
-		if [[ $INPUT -lt 0 || $INPUT -gt 14 ]];
+		if [[ $INPUT -lt 1 || $INPUT -gt 14 ]];
 			then
 			echo "PLEASE CHOOSE A VALID OPTION, TO CONTINUE PRESS ENTER";
 			read enter;

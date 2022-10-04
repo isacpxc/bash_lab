@@ -28,7 +28,7 @@ VERSION="1.0"
 case $1 in
     "-h"|"--help")
     echo "
-Informa o tamanho de um arquivo caso eles exista.
+Informs the size of one file if it exists
 
 Usage: $0 [Options...] [File]
 
@@ -46,12 +46,12 @@ Options:
         if [[ "$1" ]]; then
             if [ -f "$1" ]; then
                 SIZE=$(wc -c "$1" | cut -d " " -f 1)
-                echo "O arquivo $1 tem $SIZE byte(s)."
+                echo "file $1 has $SIZE byte(s) size."
             else    
-                echo "$1 não é um arquivo ou não foi encontrado."
+                echo "$1 is not a file or was not founded."
             fi
         else
-            echo "argumento inválido"
+            echo "invalid argument"
         fi
     ;;
 esac
