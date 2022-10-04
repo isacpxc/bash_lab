@@ -1,0 +1,1 @@
+Use the numeric keybord to correctly iteract with the program
