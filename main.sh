@@ -38,7 +38,7 @@ while [ $INPUT -ne 14 ]; do
 		read answer;
 		if [[ "$answer" == "y" ]] 
 		then
-			bash $INPUT.sh
+			bash ./exercices/$INPUT.sh
 			echo "PRESS ENTER TO CONTINUE"
 			read pressE;
 			clear
