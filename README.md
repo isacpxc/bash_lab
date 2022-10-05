@@ -1,5 +1,20 @@
 # bash_lab
 
+## Como Usar
+
+Abra o terminal linux, escolha uma pasta de origem e clone este repositório e mude para a pasta
+
+```sh
+git clone https://github.com/isacpxc/bash_lab/
+cd bash_lab
+```
+
+Por fim execute o programa com o bash
+
+```sh
+bash main.sh
+```
+
 ## Perguntas frequentes
 
 ### O que é tester.sh? 
