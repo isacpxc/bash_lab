@@ -24,8 +24,10 @@
 # arquivo é um diretório caso não seja imprime seu tamanho
 
 VERSION="1.0"
+echo "Enter a filename"
+read -r FILE 
 
-case $1 in
+case $FILE in
     "-h"|"--help")
     echo "
 Informs the size of one file if it exists
@@ -43,12 +45,12 @@ Options:
         echo "v$VERSION"
     ;;
     *)
-        if [[ "$1" ]]; then
-            if [ -f "$1" ]; then
-                SIZE=$(wc -c "$1" | cut -d " " -f 1)
-                echo "file $1 has $SIZE byte(s) size."
+        if [[ "$FILE" ]]; then
+            if [ -f "$FILE" ]; then
+                SIZE=$(wc -c "$FILE" | cut -d " " -f 1)
+                echo "file $FILE has $SIZE byte(s) size."
             else    
-                echo "$1 is not a file or was not founded."
+                echo "$FILE is not a file or was not founded."
             fi
         else
             echo "invalid argument"

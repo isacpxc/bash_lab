@@ -18,8 +18,10 @@
 # Pega a expressão que o usário deseja saber e usa o bc para calcular
 
 VERSION="1.0"
+echo "Enter a expression"
+read -r OPT
 
-for OPTION in "$@"; do
+for OPTION in $OPT; do
 
     case $OPTION in 
         "-h"|"--help")
@@ -44,7 +46,7 @@ like: 13*9, 1.5+7, -5+1, 44/3
     ;;
 
     *)
-        echo "$@" | bc
+        echo "$OPT" | bc
         break
     ;;
     esac
