@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ramon deu ruim no pc de lucas. Fiz o commit por ele
+# ramon deu ruim no pc de lucas. Fiz os commit por ele
 
 echo "digite um diretorio"
 read "dir"
