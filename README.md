@@ -22,3 +22,8 @@ Arquivo de visualização de progresso de desenvolvimento e separa as funções 
 ### Como relatar um erro?
 
 Em "issues" no GitHub crie uma issue com o nome do seu erro relatando os problemas e as possíveis soluções    
+
+
+#### Integrantes:
+
+@isacpxc, @Kelthon, @lucasvinisan 
